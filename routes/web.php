@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 //Route::get('/empresa', 'Adm\EmpresaController@index')->name('empresa');
 
-
+Route::group(['middleware' => 'auth', 'prefix' => 'adm'], function() {
 Route::get('/empresa', 'Adm\EmpresaController@create')->name('empresacreate');
 Route::post('/empresastore', 'Adm\EmpresaController@store')->name('empresastore');
 Route::get('/{id}/empresaedit', 'Adm\EmpresaController@edit')->name('empresaedit');
@@ -50,3 +50,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 //////Panel /////
 Route::resource('panel', 'Adm\HomeController');
 
+});
