@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<form action="{{route('aplicreate')}}" method="post" enctype="multipart/form-data ">   
+<form action="{{route('aplistore')}}" method="post" enctype="multipart/form-data ">   
   @method('POST') 
     @csrf
 
@@ -9,7 +9,7 @@
 
     <div class="form-group">
       <label for="titule">Titulo</label>
-      <input type="text" class="form-control" id="exampleInputEmail1" name="titule" value="{{$aplicaciones->titulo}}" aria-describedby="emailHelp" placeholder="Escribir titulo">
+      <input type="text" class="form-control" id="exampleInputEmail1" name="titule" value="{{$aplicaciones->titulos}}" aria-describedby="emailHelp" placeholder="Escribir titulo">
       <small id="title"  class="form-text text-muted"></small>
     </div>
 

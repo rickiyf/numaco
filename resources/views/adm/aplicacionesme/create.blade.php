@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<form action="{{route('aplicreate')}}" method="post" enctype="multipart/form-data ">   
+<form action="{{route('aplistore')}}" method="post" enctype="multipart/form-data ">   
   @method('POST') 
     @csrf
 

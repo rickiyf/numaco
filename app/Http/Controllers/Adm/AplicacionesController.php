@@ -111,6 +111,6 @@ class AplicacionesController extends Controller
     {
        aplicaciones::destroy($id);
         
-        return redirect('apliindex');
+        return redirect('adm/apliindex');
     }
 }

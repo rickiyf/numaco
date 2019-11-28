@@ -3,10 +3,9 @@
 namespace App\Http\Controllers\Adm;
 
 use App\Http\Controllers\Controller;
-use App\trabajosrealiz;
 use Illuminate\Http\Request;
 
-class TrabajosRealizController extends Controller
+class Home_ServiciosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,7 @@ class TrabajosRealizController extends Controller
      */
     public function index()
     {
-        $datosTrabajosRealiz=trabajosrealiz::all();
-        //dd($empresa);
-        return view ('adm.trabajosRealizme.index', compact('datosTrabajosRealiz'));
+        //
     }
 
     /**
@@ -27,9 +24,7 @@ class TrabajosRealizController extends Controller
      */
     public function create()
     {
-        $TrabajosRealiz=trabajosrealiz::all();
-        //dd($empresa);
-        return view ('adm.trabajosRealizme.create', compact('TrabajosRealiz'));
+        //
     }
 
     /**
@@ -40,28 +35,7 @@ class TrabajosRealizController extends Controller
      */
     public function store(Request $request)
     {
-        //dd( $request->all());
-        $datosTra = request()->all();
-
-        $datosTra=request()->except('_token');
-
-        if($request->hasfile('imagen'))
-    
-        {
-            $datosTra['imagen']=$request->file('imagen')->store('public');
-        }
-        $trarealiz = new trabajosrealiz();
-        $trarealiz->titulo = $request->titule;
-        $trarealiz->imagen = $datosTra['imagen'];
-        $trarealiz->orden = $request->orden;
-        $trarealiz->texto = $request->texto;
-        
-
-        $trarealiz->save();
-
-        return back();
-
-
+        //
     }
 
     /**
@@ -83,9 +57,7 @@ class TrabajosRealizController extends Controller
      */
     public function edit($id)
     {
-        $trabajosRealiz=trabajosrealiz::findOrfail($id);
-
-        return view ('adm.trabajosRealizme.edit', compact('trabajosRealiz'));
+        //
     }
 
     /**
@@ -108,8 +80,6 @@ class TrabajosRealizController extends Controller
      */
     public function destroy($id)
     {
-        trabajosrealiz::destroy($id);
-       
-        return redirect('adm/trabajosrealizindex') ;
+        //
     }
 }

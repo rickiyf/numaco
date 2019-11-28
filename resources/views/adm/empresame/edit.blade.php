@@ -2,7 +2,7 @@
 
 @section('content')
 
-<form action="{{route('empresacreate')}}" method="post" enctype="multipart/form-data ">   
+<form action="{{route('empresastore')}}" method="post" enctype="multipart/form-data ">   
   @method('POST') 
     @csrf
     <div class="form-group">

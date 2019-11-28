@@ -2,7 +2,7 @@
 
 @section('content')
 
-<form action="{{route('tracreate')}}" method="post" enctype="multipart/form-data ">   
+<form action="{{route('trastore')}}" method="post" enctype="multipart/form-data">   
   @method('POST') 
     @csrf
         <div class="form-group">
@@ -10,7 +10,7 @@
           <input type="text" class="form-control" id="exampleInputEmail1" name="titule" aria-describedby="emailHelp" placeholder="Escribir titulo">
           <small id="emailHelp" class="form-text text-muted"></small>
         </div>
-    
+ 
         <label for="custom-file">Imagen</label>
         <div class="custom-file">
                 

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<form action="{{route('tracreate')}}" method="post" enctype="multipart/form-data ">   
+<form action="{{route('trastore')}}" method="post" enctype="multipart/form-data ">   
   @method('POST') 
     @csrf
         <div class="form-group">

@@ -2,7 +2,7 @@
 
 @section('content')
 @section('content')
-<form action="{{route('contactocreate')}}" method="post" enctype="multipart/form-data ">   
+<form action="{{route('contactostore')}}" method="post" enctype="multipart/form-data ">   
   @method('POST') 
     @csrf
 

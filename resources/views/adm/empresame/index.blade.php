@@ -23,7 +23,13 @@
                 <td>{{$empresa->id}}</td>
                 <td>{{$empresa->titulo}}</td>
                 <td>{{$empresa->texto}}</td>
-                <td>{{$empresa->imagen}}</td>
+                <td>
+                
+                <img src="{{asset('storage').'/'.$empresa->imagen}}" alt="" width="200">
+
+               
+                
+                </td>
                 <td>{{$empresa->linea}}</td>  
                 <td> 
                 

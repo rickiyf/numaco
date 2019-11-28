@@ -21,8 +21,12 @@
             <tr>
                 <td>{{$trabajosrealiz->id}}</td>
                 <td>{{$trabajosrealiz->titulo}}</td>
+                <td>
+                        {{  asset(Storage::url($trabajosrealiz->imagen)) }}
+                    <img src="{{  asset(Storage::url($trabajosrealiz->imagen)) }}" alt="">
+                </td>
                 <td>{{$trabajosrealiz->texto}}</td>
-                <td>{{$trabajosrealiz->imagen}}</td>
+         
                 <td>{{$trabajosrealiz->linea}}</td>  
                 <td> 
                 

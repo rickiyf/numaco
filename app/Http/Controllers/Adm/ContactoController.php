@@ -108,6 +108,6 @@ class ContactoController extends Controller
     {
         contacto::destroy($id);
        
-        return redirect('contactoindex') ;
+        return redirect('adm/contactoindex') ;
     }
 }

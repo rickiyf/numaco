@@ -48,7 +48,7 @@ class EmpresaController extends Controller
         if($request->hasfile('imagen'))
         
         {
-            $datosEmpresa['imagen']=$request->file('imagen')->store('uploads');
+            $datosEmpresa['imagen']=$request->file('imagen')->storage('public');
         }
     
         
@@ -106,6 +106,6 @@ class EmpresaController extends Controller
     {
         Empresa::destroy($id);
        
-        return redirect('empresaindex') ;
+        return redirect('adm/empresaindex') ;
     }
 }
