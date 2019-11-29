@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Adm;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\baner;
 
 class BanerController extends Controller
 {
@@ -14,7 +15,8 @@ class BanerController extends Controller
      */
     public function index()
     {
-        //
+        $datosbaner = baner::all();
+        return view('adm.aplicacionesme.index',compact('datosaplicaciones'));
     }
 
     /**
@@ -24,9 +26,10 @@ class BanerController extends Controller
      */
     public function create()
     {
+        
         $datosbaner = baner::all();
-        //dd($empresa);
-        return view ('adm.banerme.index', compact('datosbaner'));
+       // dd($datosbaner);
+        return view ('adm.banerme.create', compact('datosbaner'));
     }
 
     /**
@@ -37,7 +40,26 @@ class BanerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datos=request()->all();
+
+        $datosBan=request()->except('_token');
+
+        if($request->hasfile('imagen'))
+    
+        {
+            $datosBan['imagen']=$request->file('imagen')->store('uploads');
+        }
+        $Baner = new contacto();
+        $Baner->mapa = $request->mapa;
+        $Baner->direccion = $request->direcciones;
+        $Baner->telefono1 = $request->telefono1;
+        $Baner->telefono2 = $request->telefono2;
+        $Baner->correo = $request->correo;
+        $Baner->texto = $request->texto;
+
+        $Baner->save();
+
+        return back(); 
     }
 
     /**

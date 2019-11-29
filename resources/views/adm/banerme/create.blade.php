@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('content')
+
 @section('content')
 <form action="{{route('banerstore')}}" method="post" enctype="multipart/form-data ">   
   @method('POST') 
     @csrf
-
+  
     <div class="form-group"> 
          <label for="exampleInputEmail1">Mapa</label>
 
@@ -29,14 +29,12 @@
 
                         <!--   Seccion  -->
 
-            <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="home" value="option1">
-                    <label class="form-check-label" for="home">1</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="empresa" value="option2">
-                    <label class="form-check-label" for="empresa">2</label>
-                  </div>
+                        <select class="custom-select">
+                          <option selected>Open this select menu</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
                   
     <!--
     <div class="form-group">
@@ -50,7 +48,7 @@
             <input type="text" class="form-control" id="orden" name="orden" placeholder="Colocar texto">
           </div>
       
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Añadir</button>
   </form>
 
 @endsection

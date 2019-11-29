@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Adm;
+namespace App\Http\Controllers\adm;
 
 use App\Http\Controllers\Controller;
-use App\homeservicios;
 use Illuminate\Http\Request;
 
-class Home_ServiciosController extends Controller
+class inicioheaderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,8 @@ class Home_ServiciosController extends Controller
      */
     public function index()
     {
-        $datosbaner = baner::all();
-        return view('adm.aplicacionesme.index',compact('datosaplicaciones'));
+        //dd('dd');
+        return view ('inicio.home');
     }
 
     /**
@@ -26,9 +25,7 @@ class Home_ServiciosController extends Controller
      */
     public function create()
     {
-        $datosbaner = homeservicios::all();
-        //dd($empresa);
-        return view ('adm.homeservicios.create', compact('datosbaner'));
+        //
     }
 
     /**
@@ -39,26 +36,7 @@ class Home_ServiciosController extends Controller
      */
     public function store(Request $request)
     {
-        $datos=request()->all();
-
-        $datosBan=request()->except('_token');
-
-        if($request->hasfile('imagen'))
-    
-        {
-            $datosBan['imagen']=$request->file('imagen')->store('uploads');
-        }
-        $Baner = new contacto();
-        $Baner->mapa = $request->mapa;
-        $Baner->direccion = $request->direcciones;
-        $Baner->telefono1 = $request->telefono1;
-        $Baner->telefono2 = $request->telefono2;
-        $Baner->correo = $request->correo;
-        $Baner->texto = $request->texto;
-
-        $Baner->save();
-
-        return back(); 
+        //
     }
 
     /**
@@ -69,7 +47,7 @@ class Home_ServiciosController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

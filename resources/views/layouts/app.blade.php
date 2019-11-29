@@ -112,17 +112,31 @@
 
                   <!-- Nav Item - Baner Menu -->
               <li class="nav-item">
-                  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#contacto" aria-expanded="true" aria-controls="contacto">
+                  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#baner" aria-expanded="true" aria-controls="baner">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Baner</span>
                   </a>
-                  <div id="contacto" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                  <div id="baner" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                       <h6 class="collapse-header">Custom Utilities:</h6>
-                      <a class="collapse-item" href="{{route('contacto')}}">AGREGAR</a>
+                      <a class="collapse-item" href="{{route('baner')}}">AGREGAR CONTENIDO</a>
                       <a class="collapse-item" href="{{route('contactoindex')}}">INDEX</a>                    
                     </div>
                   </div>
+
+                    <!-- Nav Item - HomeServicios Menu -->
+              <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#homeserv" aria-expanded="true" aria-controls="homeserv">
+                  <i class="fas fa-fw fa-cog"></i>
+                  <span>HomeServicios</span>
+                </a>
+                <div id="homeserv" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                  <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Custom Utilities:</h6>
+                    <a class="collapse-item" href="{{route('homeservi')}}">AGREGAR CONTENIDO</a>
+                    <a class="collapse-item" href="{{route('contactoindex')}}">INDEX</a>                     
+                  </div>
+                </div>
 
               <!-- Divider -->
               <hr class="sidebar-divider">
