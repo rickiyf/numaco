@@ -49,6 +49,34 @@
               <div class="sidebar-heading">
                 Guia
               </div>
+
+                    <!-- Nav Item - HomeServicios Menu -->
+                    <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#homeserv" aria-expanded="true" aria-controls="homeserv">
+                  <i class="fas fa-fw fa-cog"></i>
+                  <span>HomeServicios</span>
+                </a>
+                <div id="homeserv" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                  <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Custom Utilities:</h6>
+                    <a class="collapse-item" href="{{route('homeservi')}}">AGREGAR CONTENIDO</a>
+                    <a class="collapse-item" href="{{route('contactoindex')}}">INDEX</a>                     
+                  </div>
+                </div>
+                
+                  <!-- Nav Item - Baner Menu -->
+              <li class="nav-item">
+                  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#baner" aria-expanded="true" aria-controls="baner">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Baner</span>
+                  </a>
+                  <div id="baner" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                      <h6 class="collapse-header">Custom Utilities:</h6>
+                      <a class="collapse-item" href="{{route('baner')}}">AGREGAR CONTENIDO</a>
+                      <a class="collapse-item" href="{{route('contactoindex')}}">INDEX</a>                    
+                    </div>
+                  </div>
         
               <!-- Nav Item -EMPRESA Menu -->
               <li class="nav-item">
@@ -110,31 +138,19 @@
                   </div>
                 </div>
 
-                  <!-- Nav Item - Baner Menu -->
-              <li class="nav-item">
-                  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#baner" aria-expanded="true" aria-controls="baner">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Baner</span>
-                  </a>
-                  <div id="baner" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                      <h6 class="collapse-header">Custom Utilities:</h6>
-                      <a class="collapse-item" href="{{route('baner')}}">AGREGAR CONTENIDO</a>
-                      <a class="collapse-item" href="{{route('contactoindex')}}">INDEX</a>                    
-                    </div>
-                  </div>
+                  
 
-                    <!-- Nav Item - HomeServicios Menu -->
+                     <!-- Nav Item - Logos Menu -->
               <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#homeserv" aria-expanded="true" aria-controls="homeserv">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#logos" aria-expanded="true" aria-controls="logos">
                   <i class="fas fa-fw fa-cog"></i>
-                  <span>HomeServicios</span>
+                  <span>Logos</span>
                 </a>
-                <div id="homeserv" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                <div id="logos" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                   <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Custom Utilities:</h6>
-                    <a class="collapse-item" href="{{route('homeservi')}}">AGREGAR CONTENIDO</a>
-                    <a class="collapse-item" href="{{route('contactoindex')}}">INDEX</a>                     
+                    <a class="collapse-item" href="{{route('logos')}}">AGREGAR CONTENIDO</a>
+                    <a class="collapse-item" href="{{route('logosindex')}}">INDEX</a>                     
                   </div>
                 </div>
 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+
 @section('content')
 <form action="{{route('contactostore')}}" method="post" enctype="multipart/form-data ">   
   @method('POST') 

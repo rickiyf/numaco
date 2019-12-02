@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Adm;
 
 use App\Http\Controllers\Controller;
-use App\aplicaciones;
+use App\logos;
 use Illuminate\Http\Request;
 
-class AplicacionesController extends Controller
+class LogosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class AplicacionesController extends Controller
      */
     public function index()
     {
-        $datosaplicaciones = aplicaciones::all();
-        return view('adm.aplicacionesme.index',compact('datosaplicaciones'));
+        $datoslogos = logos::all();
+        return view('adm.logosme.index',compact('datoslogos'));
     }
 
     /**
@@ -26,9 +26,10 @@ class AplicacionesController extends Controller
      */
     public function create()
     {
-        $aplicacion = aplicaciones::all();
-        //dd($);
-        return view ('adm.aplicacionesme.create', compact('aplicacion'));
+       
+        $logos = logos::all();
+         //dd:($logos);
+        return view ('adm.Logosme.create', compact('logos'));
     }
 
     /**
@@ -39,26 +40,21 @@ class AplicacionesController extends Controller
      */
     public function store(Request $request)
     {
-       // dd($request->all());
-
-
-        $datosAplicaciones = request()->all();
-
-        $datosAplicaciones=request()->except('_token');
+        $datoslogos = request()->all();
+      //  dd( $request->all()); 
+        $datoslogos=request()->except('_token');
 
         if($request->hasfile('imagen'))
     
         {
-            $datosAplicaciones['imagen']=$request->file('imagen')->store('public');
+            $datoslogos['imagen']=$request->file('imagen')->store('public');
         }
-        $empresa = new aplicaciones();
-        $empresa->titulos = $request->titule;
-        $empresa->imagenes =  $datosAplicaciones['imagen'];
-        $empresa->texto = $request->texto;
-        $empresa->descripcion = $request->descripcion;
-        $empresa->pdf = $request->orden;
+        $logos = new logos();
+        $logos->texto = $request->texto;
+        $logos->imagen =  $datoslogos['imagen'];
+        
 
-        $empresa->save();
+        $logos->save();
 
         return back();
     }
@@ -82,11 +78,7 @@ class AplicacionesController extends Controller
      */
     public function edit($id)
     {
-        $aplicaciones=aplicaciones::findOrfail($id);
-
-        return view ('adm.aplicacionesme.edit', compact('aplicaciones'));
-
-
+        //
     }
 
     /**
@@ -109,8 +101,8 @@ class AplicacionesController extends Controller
      */
     public function destroy($id)
     {
-       aplicaciones::destroy($id);
+        logos::destroy($id);
         
-        return redirect('adm/apliindex');
+        return redirect('adm/logosindex'); 
     }
 }

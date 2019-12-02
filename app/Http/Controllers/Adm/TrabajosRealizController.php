@@ -40,7 +40,7 @@ class TrabajosRealizController extends Controller
      */
     public function store(Request $request)
     {
-        //dd( $request->all());
+       // dd( $request->all());
         $datosTra = request()->all();
 
         $datosTra=request()->except('_token');

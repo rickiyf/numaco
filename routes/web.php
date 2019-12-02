@@ -11,7 +11,10 @@
 |
 */
 //dd('aca');
-Route::get('/inicio','Adm\inicioheaderController@index');
+Route::get('/inicio','FrontendController@home');
+
+
+
 //Route::get('/empresa', 'Adm\EmpresaController@index')->name('empresa');
 
 Route::group(['middleware' => 'auth', 'prefix' => 'adm'], function() {
@@ -47,8 +50,10 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'], function() {
     Route::get('/baner', 'Adm\BanerController@create')->name('baner') ;
     Route::post('/banerstore', 'Adm\BanerController@store')->name('banerstore') ;
 
-    Route::get('/baner', 'Adm\BanerController@create')->name('baner') ;
-
+    Route::get('/logos', 'Adm\LogosController@create')->name('logos') ;
+    Route::post('/logosstore', 'Adm\LogosController@store')->name('logosstore') ;
+    Route::get('/logosindex', 'Adm\LogosController@index')->name('logosindex') ;
+    Route::get('/{id}//logosdelete', 'Adm\LogosController@destroy')->name('logosdelete') ;
 
     Route::get('/home', 'HomeController@')->name('home');
 

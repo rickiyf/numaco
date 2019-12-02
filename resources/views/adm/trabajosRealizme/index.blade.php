@@ -12,7 +12,8 @@
             <th>id</th>
             <th>Titulo</th>
             <th>Imagen</th>
-            <th>Texto</th>    
+            <th>Texto</th>  
+            <th>Linea</th>   
             <th>Acciones</th>
         </tr>
     </head>
@@ -22,12 +23,14 @@
                 <td>{{$trabajosrealiz->id}}</td>
                 <td>{{$trabajosrealiz->titulo}}</td>
                 <td>
-                        {{  asset(Storage::url($trabajosrealiz->imagen)) }}
-                    <img src="{{  asset(Storage::url($trabajosrealiz->imagen)) }}" alt="">
+                        
+                    <img src="{{  asset(Storage::url($trabajosrealiz->imagen)) }}" alt="" style= "width: 200px";>
+                    {{  asset(Storage::url($trabajosrealiz->imagen)) }}
                 </td>
                 <td>{{$trabajosrealiz->texto}}</td>
          
                 <td>{{$trabajosrealiz->linea}}</td>  
+                
                 <td> 
                 
                 <a href="{{ route('traedit', $trabajosrealiz->id) }}" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a>
