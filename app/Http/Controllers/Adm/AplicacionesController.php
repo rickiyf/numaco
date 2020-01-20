@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class AplicacionesController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing
      *
      * @return \Illuminate\Http\Response
      */
