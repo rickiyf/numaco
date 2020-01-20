@@ -29,7 +29,7 @@ class LogosController extends Controller
        
         $logos = logos::all();
          //dd:($logos);
-        return view ('adm.Logosme.create', compact('logos'));
+        return view ('adm.Logosme.create', compact('logos',));
     }
 
     /**
@@ -41,7 +41,7 @@ class LogosController extends Controller
     public function store(Request $request)
     {
         $datoslogos = request()->all();
-      //  dd( $request->all()); 
+      // dd( $request->all()); 
         $datoslogos=request()->except('_token');
 
         if($request->hasfile('imagen'))

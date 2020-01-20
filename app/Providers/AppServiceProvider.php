@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
         $logos = logos::all();
        // $redes = Content::where('section','redes')->first();
        // $contacto = Content::where('section','contacto')->first();
-       // $logos = $logos->file['imagenes'];
+        
        // $contacto = $contacto->file['mapas'];
 //        dd($contacto);
         view::share('logos',$logos);

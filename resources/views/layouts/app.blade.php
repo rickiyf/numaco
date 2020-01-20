@@ -74,7 +74,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                       <h6 class="collapse-header">Custom Utilities:</h6>
                       <a class="collapse-item" href="{{route('baner')}}">AGREGAR CONTENIDO</a>
-                      <a class="collapse-item" href="{{route('contactoindex')}}">INDEX</a>                    
+                      <a class="collapse-item" href="{{route('banerindex')}}">INDEX</a>                    
                     </div>
                   </div>
         

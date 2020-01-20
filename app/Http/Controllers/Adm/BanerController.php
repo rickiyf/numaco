@@ -15,8 +15,8 @@ class BanerController extends Controller
      */
     public function index()
     {
-        $datosbaner = baner::all();
-        return view('adm.aplicacionesme.index',compact('datosaplicaciones'));
+        $datosBaner = baner::all();
+        return view('adm.banerme.index',compact('datosBaner'));
     }
 
     /**
@@ -27,9 +27,9 @@ class BanerController extends Controller
     public function create()
     {
         
-        $datosbaner = baner::all();
+        $baner = baner::all();
        // dd($datosbaner);
-        return view ('adm.banerme.create', compact('datosbaner'));
+        return view ('adm.banerme.create', compact('baner'));
     }
 
     /**
@@ -40,22 +40,23 @@ class BanerController extends Controller
      */
     public function store(Request $request)
     {
-        $datos=request()->all();
+        $datosBaner=request()->all();
 
-        $datosBan=request()->except('_token');
+        $datosBaner=request()->except('_token');
 
         if($request->hasfile('imagen'))
     
-        {
-            $datosBan['imagen']=$request->file('imagen')->store('uploads');
-        }
-        $Baner = new contacto();
-        $Baner->mapa = $request->mapa;
-        $Baner->direccion = $request->direcciones;
-        $Baner->telefono1 = $request->telefono1;
-        $Baner->telefono2 = $request->telefono2;
-        $Baner->correo = $request->correo;
-        $Baner->texto = $request->texto;
+       {
+            $datosBan['imagen']=$request->file('imagen')->store('public/slider');
+       }
+        $Baner = new baner();
+        
+        // dd($datosBaner);
+        $Baner->texto1 = $request->texto1;
+        $Baner->texto2 = $request->texto2;
+        $Baner->imagen = $datosBan['imagen'];
+        $Baner->seccion = $request->seccion;
+        $Baner->orden = $request->orden;
 
         $Baner->save();
 
@@ -81,7 +82,9 @@ class BanerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $baner=baner::findOrfail($id);
+
+        return view ('adm.banerme.edit', compact('baner'));
     }
 
     /**
@@ -104,6 +107,8 @@ class BanerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        baner::destroy($id);
+        
+        return redirect('adm/banerindex');
     }
 }

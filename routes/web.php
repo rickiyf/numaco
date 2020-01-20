@@ -47,8 +47,11 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'], function() {
     Route::get('/homeservicios', 'Adm\Home_ServiciosController@create')->name('homeservi') ;
     Route::post('/homeserviciosstore', 'Adm\Home_serviciosController@store')->name('homeserstore') ;
 
+    Route::get('/banerindex', 'Adm\BanerController@index')->name('banerindex') ;
     Route::get('/baner', 'Adm\BanerController@create')->name('baner') ;
     Route::post('/banerstore', 'Adm\BanerController@store')->name('banerstore') ;
+    Route::get('/{id}/baneredit', 'Adm\BanerController@edit')->name('baneredit') ;
+    Route::get('/{id}/banerdelete', 'Adm\BanerController@destroy')->name('banerdelete') ;
 
     Route::get('/logos', 'Adm\LogosController@create')->name('logos') ;
     Route::post('/logosstore', 'Adm\LogosController@store')->name('logosstore') ;

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\baner;
 class FrontendController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class FrontendController extends Controller
      */
     public function home()
     {
-        return view ('inicio.home');
+        $baner = baner::all();
+        return view('inicio.home',compact('baner'));
     }
 
     /**
